@@ -1,7 +1,55 @@
-from itertools import count, islice
+def divide():
+	
+	n = int (input ("please enter a positive integer you wish to divide >> "))
+	m = int (input ("please enter a positive inter you wish to divide by >> "))
+	solution = []
+	
+	if m == 0:
+		print ("Cannot divide by zero!  Please choose a non-zero number.")
+		divide()
+	while n != 0:
+		temp_list = []
+		ans = m
+		b = 1
+		dig = 0
+		while (ans < n):
+			ans += m
+			di = temp_list.append(ans)
+			dig = len(temp_list)
+		digit = (n - dig*m)*10
+		solution.append(str(dig))
+		n = digit
+		if len(solution) == 1:
+			solution.append(".")
+		elif len(solution) > 17:
+			break
+			
+	if (len(solution) > 5) & (int(solution[2]) == int(solution[3]) == int(solution[4]) == 9):
+		print (int(solution[0])+1)
+	else:
+		print ("".join(solution))
+		
+divide()		
+		
+		
+		
+#	PREVIOUS ATTEMPTS AND CODE SNIPPETS FOR TESTING BELOW:	
+		
+	#	print (int("".join(solution))+6.000000001)
+	#
+		
+	
+#	if remainder < rem:
+		
+	
 
-n = 24
-m = 7
+#	except (OverflowError):
+#	print ("MAX_INT")
+	#except(ZeroDivisionError):
+#		print ("Cannot divide by zero!")
+
+
+
 
 def solution():
 	"""divide two integers without using multiplication, division, or mod operator; if overflow, return MAX_INT"""
@@ -75,5 +123,5 @@ def calculate_remainder(digits_and_remainder):
 #	except (overflowError):
 #		print ("MAX_INT")
 	
-solution()
+#solution()
 	
