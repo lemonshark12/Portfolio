@@ -1,7 +1,8 @@
 def divide():
+	"""Divides any positive number by another positive number without using the build-in floor division or modulus operator."""
 	
-	n = int (input ("please enter a positive integer you wish to divide >> "))
-	m = int (input ("please enter a positive inter you wish to divide by >> "))
+	n = float (input ("please enter a positive integer you wish to divide >> "))
+	m = float (input ("please enter a positive inter you wish to divide by >> "))
 	solution = []
 	
 	if m == 0:
